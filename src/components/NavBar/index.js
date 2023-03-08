@@ -8,10 +8,10 @@ function NavBar() {
       <div className="left">
         <div className="logo">
           <Link to="/">
-            <img
-              src="../../../images/tunel-icon.jpg"
+            <img className="imagen-logo"
+              src="/images/tunel_icon.png"
               alt="Site logo"
-              height="50"
+              height="100"
               width="100"
             />
           </Link>
