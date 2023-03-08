@@ -20,7 +20,7 @@ function App() {
           {/* URL segments */}
           <Route path="/detalle/:idProducts" element={<ItemDetailContainer />} />
           <Route
-            path="/category/:idCategory"
+            path="/category/:idEditorial"
             element={<ItemListContainer greeting={"Bienvenidos"} />}
           />
 

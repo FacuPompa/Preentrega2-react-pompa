@@ -8,7 +8,7 @@ export default function ItemList({ products }) {
         {products.map((product) => (
 
           <li className="item-card" key={product.id}>
-            <img src={product.avatar} alt={product.first_name} />
+            <img src={product.imagen} alt={product.nombre} />
             <h4>{`${product.nombre}`}</h4>
             <small>{product.editorial}</small>
             <br />

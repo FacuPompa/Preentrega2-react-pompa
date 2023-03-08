@@ -4,23 +4,29 @@ import ItemList from "../ItemList";
 import products from "../../products/products";
 
 function ItemListContainer({ greeting }) {
-  const [products, setProducts] = useState([]);
+  const [listadoProductos, setListadoProductos] = useState([]);
+
+  const getProductos = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          resolve(products)
+      }, 200);
+    }
+    )
+  }
 
   useEffect(() => {
-    fetch("../products/products.js")
-      .then((res) => {
-        return res.json();
-      })
-      .then((json) => {
-        console.log("json", json);
-        setProducts(json.data);
-      });
-  }, []);
+    getProductos()
+      .then(res => setListadoProductos(res))
+      .catch(err => console.log(err))
+  }, [])
 
   return (
     <>
       <h2>{greeting}</h2>
-      <ItemList products={products} />
+<div>
+      {listadoProductos.length>0?<ItemList products={listadoProductos} />:<h1>Cargando...</h1>}
+</div>
     </>
   );
 }
