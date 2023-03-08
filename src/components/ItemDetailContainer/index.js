@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import products from "../../products/products";
 import { useParams } from "react-router-dom";
 
+
 function ItemDetailContainer({ greeting }) {
   const [product, setProduct] = useState({});
 
@@ -27,7 +28,7 @@ function ItemDetailContainer({ greeting }) {
 
         <ul className="item-list">
           <li className="item-card" key={product.id}>
-            <img src={product.imagen} alt={product.nombre} />
+            <img className="imagen-list" src={product.imagen} alt={product.nombre} />
             <h4>{`${product.nombre}`}</h4>
             <small>{product.editorial}</small>
             <p>${`${product.precio}`}</p>
