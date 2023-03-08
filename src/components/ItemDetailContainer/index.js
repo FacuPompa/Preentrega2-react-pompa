@@ -27,7 +27,7 @@ function ItemDetailContainer({ greeting }) {
 
         <ul className="item-list">
           <li className="item-card" key={product.id}>
-            <img src={product.img} alt={product.nombre} />
+            <img src={product.imagen} alt={product.nombre} />
             <h4>{`${product.nombre}`}</h4>
             <small>{product.editorial}</small>
             <p>${`${product.precio}`}</p>
